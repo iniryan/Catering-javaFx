@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="1008" pageHeight="612" orientation="Landscape" columnWidth="968" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\asus\\Documents\\Project\\Daring 2021\\PBO\\CateringFX\\src\\cateringfx\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="start" class="java.lang.String"/>
+	<parameter name="end" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * FROM view_transaksi JOIN c_user ON view_transaksi.user_id =  c_user.user_id JOIN view_customer ON view_transaksi.customer_id = view_customer.customer_id JOIN c_kategori ON view_transaksi.kategori_id = c_kategori.kategori_id WHERE tanggal_pesan >= $P{start} and tanggal_pesan <= $P{end}]]>
+	</queryString>
+	<field name="customTransaksi_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="transaksi_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="user_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="customer_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kategori_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="biaya_transport" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sub_total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_bayar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bayar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kembalian" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status_bayar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_pesan" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_kirim" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_update_transaksi" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="username" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="password" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_lengkap" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="role" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="aktivasi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="created_at" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="updated_at" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="customCustomer_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_customer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="notelp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="created_customer_at" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="updated_customer_at" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="event" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="created_kategori_at" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="updated_kategori_at" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="242" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="966" height="42"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat Black" size="32"/>
+				</textElement>
+				<text><![CDATA[FOOD CATERING]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="43" width="966" height="23"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat Medium" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pesan paket makanmu sekarang!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="66" width="966" height="31"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat Medium" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jl. Sulfat 58E Malang 65124, 083877534525
+Email : belajardenganmejapintar@gmail.com | © Food Catering. All Right Reserved.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="111" width="966" height="24"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat Medium" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN TRANSAKSI]]></text>
+			</staticText>
+			<image>
+				<reportElement x="72" y="-15" width="138" height="150"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\ASUS\\Documents\\Project\\Daring 2021\\PBO\\CateringFX\\src\\cateringfx\\report\\eggKuning.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="886" y="-53" width="138" height="150"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\ASUS\\Documents\\Project\\Daring 2021\\PBO\\CateringFX\\src\\cateringfx\\report\\eggKuning.png"]]></imageExpression>
+			</image>
+			<subreport>
+				<reportElement x="1" y="185" width="200" height="50"/>
+				<subreportParameter name="start">
+					<subreportParameterExpression><![CDATA[$P{start}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="end">
+					<subreportParameterExpression><![CDATA[$P{end}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "report_subreport2filter.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="1" y="135" width="200" height="50"/>
+				<subreportParameter name="start">
+					<subreportParameterExpression><![CDATA[$P{start}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="end">
+					<subreportParameterExpression><![CDATA[$P{end}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "report_subreport1filter.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="92" height="18" forecolor="#000000" backcolor="#FBAF02"/>
+				<textElement>
+					<font fontName="Montserrat" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="92" y="0" width="72" height="18" forecolor="#000000" backcolor="#FBAF02"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kasir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="164" y="0" width="87" height="18" forecolor="#000000" backcolor="#FBAF02"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="251" y="0" width="70" height="18" forecolor="#000000" backcolor="#FBAF02"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kategori]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="321" y="0" width="69" height="18" forecolor="#000000" backcolor="#FBAF02"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Transport]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="390" y="0" width="80" height="18" forecolor="#000000" backcolor="#FBAF02"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sub Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="470" y="0" width="88" height="18" forecolor="#000000" backcolor="#FBAF02"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Bayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="557" y="0" width="88" height="18" forecolor="#000000" backcolor="#FBAF02"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="644" y="0" width="68" height="18" forecolor="#000000" backcolor="#FBAF02"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kembalian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="711" y="0" width="82" height="18" forecolor="#000000" backcolor="#FBAF02"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status Bayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="792" y="0" width="94" height="18" forecolor="#000000" backcolor="#FBAF02"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Pesan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="885" y="0" width="83" height="18" forecolor="#000000" backcolor="#FBAF02"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Kirim]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="92" height="20"/>
+				<textElement>
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{customTransaksi_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="0" width="72" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nama_lengkap}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="0" width="87" height="20"/>
+				<textElement>
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nama_customer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="251" y="0" width="70" height="20"/>
+				<textElement>
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{event}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement x="321" y="1" width="69" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{biaya_transport}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement x="390" y="1" width="80" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{sub_total}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement x="470" y="0" width="88" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{total_bayar}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement x="559" y="0" width="86" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{bayar}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement x="645" y="0" width="67" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{kembalian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="711" y="0" width="82" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{status_bayar}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="792" y="0" width="93" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{tanggal_pesan}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="884" y="0" width="83" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{tanggal_kirim}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField evaluationTime="Report" pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="932" y="6" width="36" height="19" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" x="758" y="6" width="170" height="19" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Page " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy" isBlankWhenNull="false">
+				<reportElement key="textField" x="1" y="6" width="209" height="19" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

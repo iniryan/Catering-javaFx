@@ -1,0 +1,221 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+/**
+ *
+ * @author asus
+ */
+.parent{
+    -fx-background-color: #FBAF02;
+}
+.parentleft{
+    -fx-background-color: #FFFFFF;
+}
+.comboPrompt{
+    -fx-prompt-text-fill: #000000;
+    -fx-text-fill: #000000;
+    -fx-opacity: 1.0;
+}
+.textCatatan{
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 14;
+}
+.textCatatan2{
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 12;
+}
+.parentright{
+    -fx-background-color: #eeeeee;
+}
+.close-btn{
+    -fx-background-color: transparent;
+}
+.close-btn:hover{
+    -fx-background-color: #E81123;
+}
+.min-btn{
+    -fx-background-color: transparent;
+}
+.min-btn:hover{
+    -fx-background-color: #E5E5E5;
+}
+.field{
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 14;
+    -fx-padding: 24 18;
+}
+.fieldTransparent{
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1;
+    -fx-border-color: #292C34;
+    -fx-text-fill: #000000;
+    -fx-padding: 8 0;
+}
+.searchbox{
+    -fx-background-radius: 10;
+    -fx-background-color: #e2e2e2;
+}
+.searchfield{
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 14;
+    -fx-background-color: transparent;
+    -fx-text-fill: #000000;
+    -fx-padding: 8 0;
+}
+.searchbtn{
+    -fx-background-radius: 5px;
+    -fx-background-color: #FBAF02;
+    -fx-text-fill: #000000;
+    -fx-font-family: "Montserrat SemiBold";
+}
+.btn-custom{
+    -fx-background-radius: 10;
+    -fx-background-color: #FBAF02;
+    -fx-text-fill: #000000;
+}
+.btn-cancel{
+    -fx-background-radius: 10;
+    -fx-background-color: #FF0000;
+    -fx-text-fill: #000000;
+}
+.login-btn{
+    -fx-background-color: #FBAF02;
+    -fx-text-fill: #000000;
+    -fx-font-family: "Montserrat ExtraBold";
+    -fx-font-size: 16;
+}
+.login-btn:hover{
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+}
+.block-btn{
+    -fx-background-color: transparent;
+    -fx-text-fill: #000000;
+    -fx-font-family: "Montserrat Medium";
+    -fx-font-size: 14;
+    -fx-padding: 5;
+}
+.title{
+    -fx-text-fill: #000000;
+    -fx-font-family: "Montserrat ExtraBold";
+    -fx-font-size: 24;
+}
+.subtitle{
+    -fx-text-fill: #000000;
+    -fx-font-family: "Montserrat ExtraBold";
+    -fx-font-size: 20;
+}
+.subtitle-cancel{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Montserrat ExtraBold";
+    -fx-font-size: 20;
+}
+.labelText{
+    -fx-text-fill: #000000;
+    -fx-font-family: "Montserrat";
+}
+.labelTextt{
+    -fx-text-fill: #000000;
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 12;
+}
+.labelTextt2{
+    -fx-text-fill: #000000;
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 14;
+}
+.sidebar{
+    -fx-background-color: #FBAF02;
+}
+.labelSidebar{
+    -fx-padding: 5 0 5 20;
+    -fx-text-fill: #000000;
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 14;
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+}
+.labelSidebarr{
+    -fx-text-fill: #000000;
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 14;
+}
+.labelSidebarActive{
+    -fx-background-color: #FDFDFE;
+}
+.labelSidebarout{
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    -fx-padding: 5 0 5 20;
+    -fx-text-fill: #ff0000;
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 14;
+}
+.labelSidebarrout{
+    -fx-background-color: transparent;
+    -fx-background-radius: 5px;
+    /*-fx-padding: 5 0 5 10;*/
+    -fx-text-fill: #ff0000;
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 14;
+}
+.labelSidebar:hover{
+    -fx-background-radius: 5px;
+    -fx-background-color: #FDFDFE;
+}
+.labelSidebarout:hover{
+    -fx-background-radius: 5px;
+    -fx-background-color: #FDFDFE;
+}
+.tabeltop{
+    -fx-background-color: #FBAF02;
+    -fx-background-radius: 10;
+}
+.tabelscroll{
+    -fx-background-radius: 10;
+    -fx-background-color: #FFFFFF;
+}
+.tabelcontent{
+    -fx-background-color: #e2e2e2;
+    -fx-background-radius: 10;
+}
+.inputfieldnoborder{
+    -fx-text-fill: #000000;
+    -fx-font-family: "Montserrat";
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-padding: 8;
+    -fx-border-color: transparent;
+}
+.inputfieldnoborderbox{
+    -fx-text-fill: #000000;
+    -fx-font-family: "Montserrat";
+    -fx-border-width: 1;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-border-color: transparent;
+}
+.inputField{
+    -fx-text-fill: #000000;
+    -fx-font-family: "Montserrat";
+    -fx-background-radius: 10;
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 1;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 8;
+    -fx-border-color: #e2e2e2;
+}
+.inputField:focused{
+    -fx-border-color: #292C34;
+}
+.btndelete{
+    -fx-background-color: #e2e2e2;
+    -fx-background-radius: 10;
+    -fx-text-fill: #000000;
+    -fx-font-family: "Montserrat ExtraBold";
+    -fx-font-size: 16
+}

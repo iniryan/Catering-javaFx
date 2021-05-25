@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="650.0" spacing="8.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="650.0" spacing="32.0" styleClass="tabelcontent" stylesheets="@../assets/css/style.css">
+         <children>
+            <ImageView fx:id="gambarPaket" fitHeight="135.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/img/placeholder.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER_LEFT" prefHeight="134.0" prefWidth="180.0">
+               <children>
+                  <Label fx:id="paket_nama" prefHeight="15.0" prefWidth="218.0" styleClass="labelTextt" stylesheets="@../assets/css/style.css" text="Paket Reguler" textAlignment="CENTER" textFill="#e7e5e5" />
+                  <Text fx:id="listMenu" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textCatatan2" text="Nasi Putih, Ayam Goreng, Krupuk" wrappingWidth="220.0">
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <Label fx:id="paket_harga" prefHeight="15.0" prefWidth="110.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text="Rp 20.000" textFill="#e7e5e5" />
+            <JFXButton fx:id="paket_hapus" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" prefHeight="36.0" prefWidth="34.0" ripplerFill="RED" styleClass="btndelete" stylesheets="@../assets/css/style.css" text=" " textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icon/icons8_trash_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="8.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets left="16.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="8.0" top="8.0" />
+   </padding>
+</HBox>

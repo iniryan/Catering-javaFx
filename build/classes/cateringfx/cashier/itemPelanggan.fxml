@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1015.0" spacing="8.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="1015.0" spacing="32.0" styleClass="tabelcontent" stylesheets="@../assets/css/style.css">
+         <children>
+            <Label fx:id="customer_id" prefWidth="100.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text="C001" textFill="#e7e5e5">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="customer_nama" prefWidth="180.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text="Joko Sasongko" textFill="#e7e5e5" />
+            <Label fx:id="customer_telepon" prefWidth="180.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text="08xxxxxxxxx" textFill="#e7e5e5">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="customer_alamat" prefWidth="400.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text="Jl. Malang No. 01 " textFill="#e7e5e5" />
+         </children>
+         <padding>
+            <Insets left="16.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="8.0" top="8.0" />
+   </padding>
+</HBox>

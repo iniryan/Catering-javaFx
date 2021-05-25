@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_subreport1" pageWidth="500" pageHeight="200" columnWidth="500" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<parameter name="start" class="java.lang.String"/>
+	<parameter name="end" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT COUNT(*) as total_transaksi FROM c_transaksi WHERE tanggal_pesan >= $P{start} AND tanggal_pesan <= $P{end}]]>
+	</queryString>
+	<field name="total_transaksi" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Stretch">
+			<textField pattern="#,##0">
+				<reportElement x="198" y="12" width="134" height="24"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Montserrat" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{total_transaksi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="12" width="188" height="24"/>
+				<textElement>
+					<font fontName="Montserrat Medium" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Transaksi Masuk :]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,1943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane id="parentadmin" prefHeight="700.0" prefWidth="1152.0" stylesheets="@../assets/css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cateringfx.admin.DashboardAdminController">
+   <left>
+      <Pane prefHeight="200.0" prefWidth="250.0" styleClass="sidebar" stylesheets="@../assets/css/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icon/egg.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="45.0" layoutY="210.0" styleClass="title" stylesheets="@../assets/css/style.css" text="Administrator" />
+            <JFXButton fx:id="home" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="45.0" layoutY="260.0" onAction="#navigation" prefHeight="30.0" prefWidth="180.0" ripplerFill="BLACK" stylesheets="@../assets/css/style.css" text=" ">
+               <styleClass>
+                  <String fx:value="labelSidebar" />
+                  <String fx:value="labelSidebarActive" />
+               </styleClass>
+               <graphic>
+                  <HBox prefHeight="30.0" prefWidth="180.0" stylesheets="@../assets/css/style.css">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/icons8_home_24px.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="8.0" prefWidth="136.0" styleClass="labelSidebarr" stylesheets="@../assets/css/style.css" text="Home">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="paket" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="45.0" layoutY="320.0" onAction="#navigation" prefHeight="30.0" prefWidth="180.0" ripplerFill="BLACK" styleClass="labelSidebar" stylesheets="@../assets/css/style.css" text=" ">
+               <graphic>
+                  <HBox prefHeight="30.0" prefWidth="180.0" stylesheets="@../assets/css/style.css">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/icons8_start_menu_24px.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="8.0" prefWidth="136.0" styleClass="labelSidebarr" stylesheets="@../assets/css/style.css" text="Paket">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="menu" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="45.0" layoutY="380.0" onAction="#navigation" prefHeight="30.0" prefWidth="180.0" ripplerFill="BLACK" styleClass="labelSidebar" stylesheets="@../assets/css/style.css" text=" ">
+               <graphic>
+                  <HBox prefHeight="30.0" prefWidth="180.0" stylesheets="@../assets/css/style.css">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/icons8_cutlery_24px.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="8.0" prefWidth="136.0" styleClass="labelSidebarr" stylesheets="@../assets/css/style.css" text="Menu">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="kategori" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="45.0" layoutY="440.0" onAction="#navigation" prefHeight="30.0" prefWidth="180.0" ripplerFill="BLACK" styleClass="labelSidebar" stylesheets="@../assets/css/style.css" text=" ">
+               <graphic>
+                  <HBox prefHeight="30.0" prefWidth="180.0" stylesheets="@../assets/css/style.css">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/icons8_event_24px.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="8.0" prefWidth="136.0" styleClass="labelSidebarr" stylesheets="@../assets/css/style.css" text="Kategori">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="karyawan" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="45.0" layoutY="500.0" onAction="#navigation" prefHeight="30.0" prefWidth="180.0" ripplerFill="BLACK" styleClass="labelSidebar" stylesheets="@../assets/css/style.css" text=" ">
+               <graphic>
+                  <HBox prefHeight="30.0" prefWidth="180.0" stylesheets="@../assets/css/style.css">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/icons8_person_24px_4.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="8.0" prefWidth="136.0" styleClass="labelSidebarr" stylesheets="@../assets/css/style.css" text="Karyawan">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="pelanggan" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="45.0" layoutY="560.0" onAction="#navigation" prefHeight="30.0" prefWidth="180.0" ripplerFill="BLACK" styleClass="labelSidebar" stylesheets="@../assets/css/style.css" text=" ">
+               <graphic>
+                  <HBox prefHeight="30.0" prefWidth="180.0" stylesheets="@../assets/css/style.css">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/icons8_user_account_24px_1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="8.0" prefWidth="136.0" styleClass="labelSidebarr" stylesheets="@../assets/css/style.css" text="Pelanggan">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="keluar" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="45.0" layoutY="620.0" onAction="#navigation" prefHeight="30.0" prefWidth="180.0" ripplerFill="RED" styleClass="labelSidebarout" stylesheets="@../assets/css/style.css" text=" ">
+               <graphic>
+                  <HBox prefHeight="30.0" prefWidth="180.0" stylesheets="@../assets/css/style.css">
+                     <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/icon/icons8_sign_out_24px.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="8.0" prefWidth="136.0" styleClass="labelSidebarrout" stylesheets="@../assets/css/style.css" text="Keluar">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </graphic>
+            </JFXButton>
+         </children>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis></Pane>
+   </left>
+   <center>
+      <StackPane prefHeight="700.0" prefWidth="994.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="contentPelanggan" prefHeight="700.0" prefWidth="902.0">
+               <children>
+                  <Pane prefHeight="700.0" prefWidth="902.0" styleClass="parentleft" stylesheets="@../assets/css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox layoutX="25.0" layoutY="40.0" prefHeight="40.0" prefWidth="400.0" styleClass="searchbox" stylesheets="@../assets/css/style.css">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="360.0" stylesheets="@../assets/css/style.css">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_search_24px.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <TextField fx:id="cariPelanggan" prefHeight="34.0" prefWidth="313.0" promptText="Cari Pelanggan" styleClass="searchfield" stylesheets="@../assets/css/style.css">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="8.0" left="16.0" top="8.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <Label layoutX="30.0" layoutY="110.0" styleClass="title" stylesheets="@../assets/css/style.css" text="Data Pelanggan" />
+                        <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="1035.0" spacing="32.0" styleClass="tabeltop" stylesheets="@../assets/css/style.css">
+                           <children>
+                              <Label prefWidth="100.0" stylesheets="@../assets/css/style.css" text="ID Pelanggan" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label prefWidth="180.0" stylesheets="@../assets/css/style.css" text="Nama Pelanggan" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label prefWidth="180.0" stylesheets="@../assets/css/style.css" text="No. Telp" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label prefWidth="350.0" stylesheets="@../assets/css/style.css" text="Alamat" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="16.0" right="32.0" />
+                           </padding>
+                        </HBox>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="25.0" layoutY="220.0" prefHeight="465.0" prefWidth="1035.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css">
+                           <content>
+                              <VBox fx:id="itemPelanggan" prefHeight="463.0" prefWidth="1033.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css" />
+                           </content>
+                        </ScrollPane>
+                        <HBox layoutX="1020.0" layoutY="10.0" prefHeight="23.0" prefWidth="56.0">
+                           <children>
+                              <JFXButton fx:id="minimize_stage3" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" prefHeight="31.0" prefWidth="35.0" ripplerFill="#e5e5e5" styleClass="min-btn" stylesheets="@../assets/css/style.css" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_subtract_40px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton alignment="CENTER" contentDisplay="CENTER" ellipsisString="" onMouseClicked="#close_app2" prefHeight="31.0" prefWidth="35.0" ripplerFill="RED" styleClass="close-btn" stylesheets="@../assets/css/style.css" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_delete_40px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="contentMenu" prefHeight="700.0" prefWidth="902.0">
+               <children>
+                  <Pane prefHeight="700.0" prefWidth="902.0" styleClass="parentleft" stylesheets="@../assets/css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox layoutX="25.0" layoutY="40.0" prefHeight="40.0" prefWidth="400.0" styleClass="searchbox" stylesheets="@../assets/css/style.css">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="360.0" stylesheets="@../assets/css/style.css">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_search_24px.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <TextField fx:id="cariMenu" prefHeight="34.0" prefWidth="313.0" promptText="Cari Menu" styleClass="searchfield" stylesheets="@../assets/css/style.css">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="8.0" left="16.0" top="8.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <Label layoutX="30.0" layoutY="110.0" styleClass="title" stylesheets="@../assets/css/style.css" text="Data Menu Makanan" />
+                        <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="650.0" spacing="32.0" styleClass="tabeltop" stylesheets="@../assets/css/style.css">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="15.0" prefWidth="142.0" stylesheets="@../assets/css/style.css" text="Menu" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label prefHeight="15.0" prefWidth="148.0" stylesheets="@../assets/css/style.css" text="Nama Menu" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label prefHeight="15.0" prefWidth="148.0" stylesheets="@../assets/css/style.css" text="Harga Satuan" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label prefWidth="100.0" stylesheets="@../assets/css/style.css" text="Aksi" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="16.0" right="32.0" />
+                           </padding>
+                        </HBox>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="25.0" layoutY="220.0" prefHeight="465.0" prefWidth="650.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css">
+                           <content>
+                              <VBox fx:id="itemMenu" prefHeight="465.0" prefWidth="648.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css" />
+                           </content>
+                        </ScrollPane>
+                        <VBox layoutX="740.0" prefHeight="700.0" prefWidth="350.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="700.0" prefWidth="218.0">
+                                 <VBox.margin>
+                                    <Insets top="16.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="33.0" prefWidth="110.0" stylesheets="@../assets/css/style.css" text="Nama Menu">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="33.0" prefWidth="4.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=":">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="nama_menu" prefHeight="23.0" prefWidth="193.0" promptText="Nasi Putih" styleClass="inputField" stylesheets="@../assets/css/style.css">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="33.0" prefWidth="110.0" stylesheets="@../assets/css/style.css" text="Harga Satuan">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="33.0" prefWidth="4.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=":">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="harga_menu" prefHeight="23.0" prefWidth="193.0" promptText="Rp 5.000" styleClass="inputField" stylesheets="@../assets/css/style.css">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <TextField fx:id="filepathField" editable="false" prefHeight="33.0" prefWidth="315.0" promptText="FilePath" styleClass="inputField" stylesheets="@../assets/css/style.css">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="33.0" prefWidth="110.0" stylesheets="@../assets/css/style.css" text="Gambar">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="33.0" prefWidth="4.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=":">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton fx:id="btnBrowse" prefHeight="33.0" prefWidth="193.0" ripplerFill="BLACK" styleClass="inputField" stylesheets="@../assets/css/style.css" text="Browse Image">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXButton fx:id="tambahMenu" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Tambah">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets right="24.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="updateMenu" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Update">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets right="24.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="resetMenu" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Reset">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="16.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="16.0" top="24.0" />
+                           </padding>
+                        </VBox>
+                        <HBox layoutX="1020.0" layoutY="10.0" prefHeight="23.0" prefWidth="56.0">
+                           <children>
+                              <JFXButton fx:id="minimize_stage1" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" prefHeight="31.0" prefWidth="35.0" ripplerFill="#e5e5e5" styleClass="min-btn" stylesheets="@../assets/css/style.css" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_subtract_40px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton alignment="CENTER" contentDisplay="CENTER" ellipsisString="" onMouseClicked="#close_app2" prefHeight="31.0" prefWidth="35.0" ripplerFill="RED" styleClass="close-btn" stylesheets="@../assets/css/style.css" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_delete_40px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="contentKategori" prefHeight="700.0" prefWidth="902.0">
+               <children>
+                  <Pane prefHeight="700.0" prefWidth="902.0" styleClass="parentleft" stylesheets="@../assets/css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox layoutX="25.0" layoutY="40.0" prefHeight="40.0" prefWidth="400.0" styleClass="searchbox" stylesheets="@../assets/css/style.css">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="360.0" stylesheets="@../assets/css/style.css">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_search_24px.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <TextField fx:id="cariKategori" prefHeight="34.0" prefWidth="313.0" promptText="Cari Kategori" styleClass="searchfield" stylesheets="@../assets/css/style.css">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="8.0" left="16.0" top="8.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <Label layoutX="30.0" layoutY="110.0" styleClass="title" stylesheets="@../assets/css/style.css" text="Data Kategori / Event" />
+                        <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="650.0" spacing="32.0" styleClass="tabeltop" stylesheets="@../assets/css/style.css">
+                           <children>
+                              <Label prefWidth="150.0" stylesheets="@../assets/css/style.css" text="ID Kategori" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label prefWidth="270.0" stylesheets="@../assets/css/style.css" text="Nama Kategori / Event" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label prefWidth="280.0" stylesheets="@../assets/css/style.css" text="Dibuat pada" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label prefWidth="100.0" stylesheets="@../assets/css/style.css" text="Aksi" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="16.0" right="32.0" />
+                           </padding>
+                        </HBox>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="25.0" layoutY="220.0" prefHeight="465.0" prefWidth="650.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css">
+                           <content>
+                              <VBox fx:id="itemKategori" prefHeight="465.0" prefWidth="648.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css" />
+                           </content>
+                        </ScrollPane>
+                        <VBox layoutX="740.0" prefHeight="700.0" prefWidth="350.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="700.0" prefWidth="218.0">
+                                 <VBox.margin>
+                                    <Insets top="16.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="33.0" prefWidth="110.0" stylesheets="@../assets/css/style.css" text="Nama Kategori">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="33.0" prefWidth="4.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=":">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="fieldKategori" prefHeight="23.0" prefWidth="193.0" promptText="Mingguan" styleClass="inputField" stylesheets="@../assets/css/style.css">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXButton onAction="#tambahKategori" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Tambah">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets right="24.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="updateKategoribtn" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Update">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets right="24.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="resetKategori" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Reset">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="16.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="218.0" spacing="32.0" styleClass="tabeltop" stylesheets="@../assets/css/style.css">
+                                       <children>
+                                          <Label prefHeight="15.0" prefWidth="108.0" stylesheets="@../assets/css/style.css" text="Tujuan" textFill="#e7e5e5">
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="15.0" prefWidth="121.0" stylesheets="@../assets/css/style.css" text="Biaya Transport" textFill="#e7e5e5">
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="15.0" prefWidth="61.0" stylesheets="@../assets/css/style.css" text="Aksi" textFill="#e7e5e5">
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="16.0" right="32.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets top="32.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="218.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css">
+                                       <content>
+                                          <VBox fx:id="itemTransport" prefHeight="200.0" prefWidth="218.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css" />
+                                       </content>
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </ScrollPane>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="33.0" prefWidth="110.0" stylesheets="@../assets/css/style.css" text="Tujuan ">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="33.0" prefWidth="4.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=":">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="fieldTujuan" prefHeight="23.0" prefWidth="193.0" promptText="Klojen" styleClass="inputField" stylesheets="@../assets/css/style.css">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="18.0" layoutY="484.0" prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="33.0" prefWidth="110.0" stylesheets="@../assets/css/style.css" text="Biaya Transport">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="33.0" prefWidth="4.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=":">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="fieldBiaya" prefHeight="23.0" prefWidth="193.0" promptText="Rp 10.000" styleClass="inputField" stylesheets="@../assets/css/style.css">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXButton onAction="#tambahTransport" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Tambah">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets right="24.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="updateTransport" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Update">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets right="24.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="resetTransport" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Reset">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="16.0" top="24.0" />
+                           </padding>
+                        </VBox>
+                        <HBox layoutX="1020.0" layoutY="10.0" prefHeight="23.0" prefWidth="56.0">
+                           <children>
+                              <JFXButton fx:id="minimize_stage5" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" prefHeight="31.0" prefWidth="35.0" ripplerFill="#e5e5e5" styleClass="min-btn" stylesheets="@../assets/css/style.css" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_subtract_40px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton alignment="CENTER" contentDisplay="CENTER" ellipsisString="" onMouseClicked="#close_app2" prefHeight="31.0" prefWidth="35.0" ripplerFill="RED" styleClass="close-btn" stylesheets="@../assets/css/style.css" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_delete_40px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneTransaksi" prefHeight="700.0" prefWidth="902.0">
+               <children>
+                  <Pane prefHeight="700.0" prefWidth="902.0" styleClass="parentleft" stylesheets="@../assets/css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox layoutX="25.0" layoutY="40.0" prefHeight="40.0" prefWidth="400.0" styleClass="searchbox" stylesheets="@../assets/css/style.css">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="360.0" stylesheets="@../assets/css/style.css">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_search_24px.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <TextField fx:id="cariTransaksi" prefHeight="34.0" prefWidth="313.0" promptText="Cari Transaksi" styleClass="searchfield" stylesheets="@../assets/css/style.css">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="8.0" left="16.0" top="8.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <Label layoutX="30.0" layoutY="270.0" styleClass="title" stylesheets="@../assets/css/style.css" text="Riwayat Transaksi" />
+                        <HBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="320.0" prefHeight="40.0" prefWidth="650.0" spacing="32.0" styleClass="tabeltop" stylesheets="@../assets/css/style.css">
+                           <children>
+                              <Label prefWidth="210.0" styleClass="labelTextt" stylesheets="@../assets/css/style.css" text="Kode Transaksi" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <Label prefWidth="210.0" styleClass="labelTextt" stylesheets="@../assets/css/style.css" text="Nama Kasir" textFill="#e7e5e5" />
+                              <Label prefWidth="230.0" styleClass="labelTextt" stylesheets="@../assets/css/style.css" text="Tanggal Pesan" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <Label prefWidth="230.0" styleClass="labelTextt" stylesheets="@../assets/css/style.css" text="Tanggal Kirim" textFill="#e7e5e5" />
+                           </children>
+                           <padding>
+                              <Insets left="16.0" right="32.0" />
+                           </padding>
+                        </HBox>
+                        <HBox layoutX="20.0" layoutY="90.0" prefHeight="100.0" prefWidth="690.0" stylesheets="@../assets/css/style.css">
+                           <children>
+                              <VBox prefHeight="84.0" prefWidth="127.0" styleClass="searchbtn" stylesheets="@../assets/css/style.css">
+                                 <children>
+                                    <Label styleClass="labelTextt" stylesheets="@../assets/css/style.css" text="Total Transaksi" />
+                                    <Label fx:id="countTransaksi" alignment="CENTER" prefHeight="52.0" prefWidth="97.0" styleClass="title" stylesheets="@../assets/css/style.css" text="0" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="8.0" left="16.0" right="16.0" top="16.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox prefHeight="84.0" prefWidth="234.0" styleClass="searchbtn" stylesheets="@../assets/css/style.css">
+                                 <children>
+                                    <Label prefHeight="15.0" prefWidth="122.0" styleClass="labelTextt" stylesheets="@../assets/css/style.css" text="Pendapatan" />
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="45.0" prefWidth="75.0" styleClass="title" stylesheets="@../assets/css/style.css" text="Rp" />
+                                          <Label fx:id="countPendapatan" prefHeight="45.0" prefWidth="199.0" styleClass="title" stylesheets="@../assets/css/style.css" text="0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="8.0" left="16.0" right="16.0" top="16.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="84.0" prefWidth="280.0" styleClass="searchbtn" stylesheets="@../assets/css/style.css">
+                                 <children>
+                                    <Label styleClass="labelTextt" stylesheets="@../assets/css/style.css" text="Total Pendapatan" />
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="45.0" prefWidth="75.0" styleClass="title" stylesheets="@../assets/css/style.css" text="Rp" />
+                                          <Label fx:id="countTotalPendapatan" prefHeight="45.0" prefWidth="243.0" styleClass="title" stylesheets="@../assets/css/style.css" text="0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="8.0" left="16.0" right="16.0" top="16.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="30.0" layoutY="380.0" prefHeight="350.0" prefWidth="650.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css">
+                           <content>
+                              <VBox fx:id="itemTransaksi" prefHeight="350.0" prefWidth="650.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css" />
+                           </content>
+                        </ScrollPane>
+                        <VBox layoutX="740.0" prefHeight="731.0" prefWidth="350.0">
+                           <padding>
+                              <Insets bottom="16.0" top="24.0" />
+                           </padding>
+                           <children>
+                              <VBox fx:id="vboxDetail" prefHeight="700.0" prefWidth="218.0">
+                                 <children>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="16.0" prefWidth="84.0" stylesheets="@../assets/css/style.css" text="ID Customer">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="18.0" prefWidth="3.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=": ">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="idCustomer" layoutX="118.0" layoutY="18.0" prefHeight="18.0" prefWidth="197.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text="Cxxxx">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="16.0" prefWidth="84.0" stylesheets="@../assets/css/style.css" text="Nama ">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="18.0" prefWidth="3.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=": ">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="namaCustomer" layoutX="118.0" layoutY="18.0" prefHeight="18.0" prefWidth="205.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text="xxxxx">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="200.0" prefWidth="334.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="450.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css">
+                                             <content>
+                                                <VBox fx:id="itemDetail" prefHeight="445.0" prefWidth="398.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css" />
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="16.0" prefWidth="86.0" stylesheets="@../assets/css/style.css" text="Kategori ">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="18.0" prefWidth="3.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=": ">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="kategoriPesanan" prefHeight="16.0" prefWidth="215.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text="ex: Mingguan">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="85.0" stylesheets="@../assets/css/style.css" text="Transport ">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="18.0" prefWidth="31.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=": Rp">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="transportPesanan" prefHeight="18.0" prefWidth="176.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text="0">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="85.0" stylesheets="@../assets/css/style.css" text="Sub Total ">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="18.0" prefWidth="31.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=": Rp">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="subTotalPesanan" prefHeight="18.0" prefWidth="176.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text="0">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="85.0" stylesheets="@../assets/css/style.css" text="Total Bayar ">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="18.0" prefWidth="31.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=": Rp">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="totalBayarPesanan" prefHeight="18.0" prefWidth="178.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text="0">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox fx:id="bayarLunasBox" layoutX="18.0" layoutY="256.0" prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="16.0" prefWidth="86.0" stylesheets="@../assets/css/style.css" text="Bayar">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="18.0" prefWidth="30.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=": Rp ">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="bayarLunas" prefHeight="18.0" prefWidth="167.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text="0">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="85.0" stylesheets="@../assets/css/style.css" text="Kembalian">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="18.0" prefWidth="31.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=": Rp">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="kembalianPesanan" prefHeight="18.0" prefWidth="181.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text="0">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox fx:id="statusPesananBox" alignment="CENTER" prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="16.0" prefWidth="90.0" stylesheets="@../assets/css/style.css" text="Status Bayar">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="18.0" prefWidth="3.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=": ">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="statusPesanan" prefHeight="16.0" prefWidth="215.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text="ex: Lunas">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox fx:id="bayarPesananBox" alignment="CENTER" prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="101.0" stylesheets="@../assets/css/style.css" text="Bayar Lunas">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="18.0" prefWidth="8.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=": ">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="bayarPesanan" prefHeight="33.0" prefWidth="224.0" promptText="Rp 0" styleClass="inputField" stylesheets="@../assets/css/style.css" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" top="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox fx:id="gantiLunasBox" alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXButton fx:id="gantiLunas" alignment="CENTER" prefWidth="251.0" ripplerFill="BLACK" stylesheets="@../assets/css/style.css" text="Lunasi">
+                                             <padding>
+                                                <Insets bottom="16.0" left="28.0" right="28.0" top="16.0" />
+                                             </padding>
+                                             <styleClass>
+                                                <String fx:value="subtitle" />
+                                                <String fx:value="btn-custom" />
+                                             </styleClass>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <HBox layoutX="1020.0" layoutY="10.0" prefHeight="23.0" prefWidth="56.0">
+                           <children>
+                              <JFXButton fx:id="minimize_stage4" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" prefHeight="31.0" prefWidth="35.0" ripplerFill="#e5e5e5" styleClass="min-btn" stylesheets="@../assets/css/style.css" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_subtract_40px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton alignment="CENTER" contentDisplay="CENTER" ellipsisString="" onMouseClicked="#close_app2" prefHeight="31.0" prefWidth="35.0" ripplerFill="RED" styleClass="close-btn" stylesheets="@../assets/css/style.css" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_delete_40px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="30.0" layoutY="200.0" prefHeight="44.0" prefWidth="401.0" styleClass="searchbox" stylesheets="@../assets/css/style.css">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="360.0" stylesheets="@../assets/css/style.css">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_money_bag_24px_1.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="8.0" right="8.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <JFXDatePicker fx:id="historyStart" defaultColor="#fbaf02" editable="false" prefHeight="25.0" prefWidth="160.0" promptText="Dari" styleClass="customDatePicker" />
+                                    <JFXDatePicker fx:id="historyEnd" defaultColor="#fbaf02" editable="false" promptText="Hingga" styleClass="customDatePicker" />
+                                 </children>
+                              </HBox>
+                              <Button fx:id="clearHistorySearch" mnemonicParsing="false" prefHeight="44.0" prefWidth="44.0" styleClass="searchbtn">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_delete_40px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <JFXButton fx:id="btnCetakLaporan" layoutX="500.0" layoutY="200.0" prefHeight="44.0" prefWidth="149.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Cetak Laporan">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/icon/icons8_print_24px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="contentKaryawan" prefHeight="700.0" prefWidth="902.0">
+               <children>
+                  <Pane prefHeight="700.0" prefWidth="902.0" styleClass="parentleft" stylesheets="@../assets/css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox layoutX="25.0" layoutY="40.0" prefHeight="40.0" prefWidth="400.0" styleClass="searchbox" stylesheets="@../assets/css/style.css">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="360.0" stylesheets="@../assets/css/style.css">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_search_24px.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <TextField fx:id="cariKaryawan" prefHeight="34.0" prefWidth="313.0" promptText="Cari Karyawan" styleClass="searchfield" stylesheets="@../assets/css/style.css">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="8.0" left="16.0" top="8.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <Label layoutX="30.0" layoutY="110.0" styleClass="title" stylesheets="@../assets/css/style.css" text="Data Karyawan" />
+                        <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="660.0" spacing="32.0" styleClass="tabeltop" stylesheets="@../assets/css/style.css">
+                           <children>
+                              <Label prefWidth="200.0" stylesheets="@../assets/css/style.css" text="ID Karyawan" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label prefWidth="230.0" stylesheets="@../assets/css/style.css" text="Nama Karyawan" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label prefWidth="200.0" stylesheets="@../assets/css/style.css" text="Username" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="210.0" stylesheets="@../assets/css/style.css" text="Bergabung" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="180.0" stylesheets="@../assets/css/style.css" text="Status" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" stylesheets="@../assets/css/style.css" text="Aksi" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="16.0" right="32.0" />
+                           </padding>
+                        </HBox>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="25.0" layoutY="220.0" prefHeight="465.0" prefWidth="660.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css">
+                           <content>
+                              <VBox fx:id="itemKaryawan" prefHeight="465.0" prefWidth="660.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css" />
+                           </content>
+                        </ScrollPane>
+                        <VBox layoutX="740.0" prefHeight="700.0" prefWidth="350.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="700.0" prefWidth="218.0">
+                                 <VBox.margin>
+                                    <Insets top="16.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="33.0" prefWidth="110.0" stylesheets="@../assets/css/style.css" text="Nama Karyawan">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="33.0" prefWidth="4.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=":">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="fieldNamaLengkap" prefHeight="23.0" prefWidth="193.0" promptText="Joko Sasongko" styleClass="inputField" stylesheets="@../assets/css/style.css">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="33.0" prefWidth="110.0" stylesheets="@../assets/css/style.css" text="Username">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="33.0" prefWidth="4.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=":">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="fieldUsername" prefHeight="23.0" prefWidth="193.0" promptText="JokoSasongko" styleClass="inputField" stylesheets="@../assets/css/style.css">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXButton onAction="#tambahKaryawan" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Tambah">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets right="24.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="updateKaryawan" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Update">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets right="24.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="resetKaryawan" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Reset">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="32.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <padding>
+                                          <Insets bottom="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textCatatan" text="*catatan :  pasword sama dengan username" wrappingWidth="326.13671875">
+                                             <font>
+                                                <Font name="Avengeance Heroic Avenger Italic" size="12.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="24.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="16.0" top="24.0" />
+                           </padding>
+                        </VBox>
+                        <HBox layoutX="1020.0" layoutY="10.0" prefHeight="23.0" prefWidth="56.0">
+                           <children>
+                              <JFXButton fx:id="minimize_stage6" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" prefHeight="31.0" prefWidth="35.0" ripplerFill="#e5e5e5" styleClass="min-btn" stylesheets="@../assets/css/style.css" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_subtract_40px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton alignment="CENTER" contentDisplay="CENTER" ellipsisString="" onMouseClicked="#close_app2" prefHeight="31.0" prefWidth="35.0" ripplerFill="RED" styleClass="close-btn" stylesheets="@../assets/css/style.css" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_delete_40px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="contentPaket" prefHeight="700.0" prefWidth="902.0">
+               <children>
+                  <Pane prefHeight="700.0" prefWidth="902.0" styleClass="parentleft" stylesheets="@../assets/css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox layoutX="25.0" layoutY="40.0" prefHeight="40.0" prefWidth="400.0" styleClass="searchbox" stylesheets="@../assets/css/style.css">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="360.0" stylesheets="@../assets/css/style.css">
+                                 <children>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_search_24px.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <TextField fx:id="cariPaket" prefHeight="34.0" prefWidth="313.0" promptText="Cari Paket" styleClass="searchfield" stylesheets="@../assets/css/style.css">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="8.0" left="16.0" top="8.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <Label layoutX="30.0" layoutY="110.0" styleClass="title" stylesheets="@../assets/css/style.css" text="Data Paket Makanan" />
+                        <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="650.0" spacing="32.0" styleClass="tabeltop" stylesheets="@../assets/css/style.css">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="15.0" prefWidth="120.0" stylesheets="@../assets/css/style.css" text="Paket" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="15.0" prefWidth="146.0" stylesheets="@../assets/css/style.css" text="Nama Paket" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="142.0" stylesheets="@../assets/css/style.css" text="Harga Paket" textFill="#e7e5e5">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="77.0" stylesheets="@../assets/css/style.css" text="Aksi" textFill="#e7e5e5">
+                                 <styleClass>
+                                    <String fx:value="labelText" />
+                                    <String fx:value="labelTextt" />
+                                 </styleClass>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="16.0" right="32.0" />
+                           </padding>
+                        </HBox>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="25.0" layoutY="220.0" prefHeight="465.0" prefWidth="670.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css">
+                           <content>
+                              <VBox fx:id="itemPaket" prefHeight="465.0" prefWidth="670.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css" />
+                           </content>
+                        </ScrollPane>
+                        <VBox layoutX="740.0" prefHeight="700.0" prefWidth="350.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="700.0" prefWidth="218.0">
+                                 <VBox.margin>
+                                    <Insets top="16.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="41.0" prefWidth="110.0" stylesheets="@../assets/css/style.css" text="Pilih Menu">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="41.0" prefWidth="4.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=":">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="pilihMenu" prefHeight="23.0" prefWidth="193.0" promptText="Pilih Menu" styleClass="inputField" stylesheets="@../assets/css/style.css">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </ComboBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="218.0" prefWidth="334.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="238.0" prefWidth="334.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css">
+                                             <content>
+                                                <VBox fx:id="itemMenu2" prefHeight="345.0" prefWidth="398.0" styleClass="tabelscroll" stylesheets="@../assets/css/style.css" />
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="33.0" prefWidth="110.0" stylesheets="@../assets/css/style.css" text="Nama Paket">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="33.0" prefWidth="4.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=":">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="namaPaket" prefHeight="23.0" prefWidth="193.0" promptText="Paket Reguler" styleClass="inputField" stylesheets="@../assets/css/style.css">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="33.0" prefWidth="110.0" stylesheets="@../assets/css/style.css" text="Harga Menu">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="33.0" prefWidth="4.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=":">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="paketHarga" editable="false" prefHeight="23.0" prefWidth="193.0" promptText="Rp 20.000" styleClass="inputField" stylesheets="@../assets/css/style.css" text="0">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <padding>
+                                          <Insets bottom="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textCatatan" text="*catatan :  tarif per paket Rp 10.000,-" wrappingWidth="326.13671875">
+                                             <font>
+                                                <Font name="Avengeance Heroic Avenger Italic" size="12.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <TextField fx:id="filePathpaket" editable="false" prefHeight="33.0" prefWidth="315.0" promptText="FilePath" styleClass="inputField" stylesheets="@../assets/css/style.css">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+                                       <children>
+                                          <Label prefHeight="33.0" prefWidth="110.0" stylesheets="@../assets/css/style.css" text="Gambar">
+                                             <font>
+                                                <Font name="Montserrat SemiBold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="labelText" />
+                                                <String fx:value="labelTextt" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label prefHeight="33.0" prefWidth="4.0" styleClass="labelText" stylesheets="@../assets/css/style.css" text=":">
+                                             <font>
+                                                <Font name="Montserrat Regular" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton fx:id="btnBrowse1" prefHeight="33.0" prefWidth="193.0" ripplerFill="BLACK" styleClass="inputField" stylesheets="@../assets/css/style.css" text="Browse Image">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXButton fx:id="tambahpaket" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Tambah">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets right="24.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="updatePaket" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Update">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets right="24.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="resetPaket" prefHeight="40.0" prefWidth="70.0" ripplerFill="BLACK" styleClass="searchbtn" stylesheets="@../assets/css/style.css" text="Reset">
+                                             <padding>
+                                                <Insets left="8.0" right="8.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="16.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="16.0" top="24.0" />
+                           </padding>
+                        </VBox>
+                        <HBox layoutX="1020.0" layoutY="10.0" prefHeight="23.0" prefWidth="56.0">
+                           <children>
+                              <JFXButton fx:id="minimize_stage2" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" prefHeight="31.0" prefWidth="35.0" ripplerFill="#e5e5e5" styleClass="min-btn" stylesheets="@../assets/css/style.css" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_subtract_40px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton alignment="CENTER" contentDisplay="CENTER" ellipsisString="" onMouseClicked="#close_app2" prefHeight="31.0" prefWidth="35.0" ripplerFill="RED" styleClass="close-btn" stylesheets="@../assets/css/style.css" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/icon/icons8_delete_40px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

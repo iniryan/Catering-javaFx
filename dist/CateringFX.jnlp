@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="CateringFX.jnlp">
+  <information>
+    <title>CateringFX</title>
+    <vendor>asus</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="CateringFX.jar" size="1764242" download="eager" />
+    <jar href="lib\commons-beanutils-1.8.2.jar" size="231891" download="eager" />
+    <jar href="lib\commons-collections-3.2.1.jar" size="575389" download="eager" />
+    <jar href="lib\commons-digester-1.7.jar" size="139966" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\ecj-4.3.1.jar" size="1830791" download="eager" />
+    <jar href="lib\fontawesomefx-8.1.jar" size="179086" download="eager" />
+    <jar href="lib\groovy-all-1.7.5.jar" size="5482221" download="eager" />
+    <jar href="lib\itext-pdfa-5.5.5.jar" size="62409" download="eager" />
+    <jar href="lib\itext-xtra-5.5.5.jar" size="103589" download="eager" />
+    <jar href="lib\itextpdf-5.5.5.jar" size="2164152" download="eager" />
+    <jar href="lib\jasperreports-6.0.0.jar" size="5144510" download="eager" />
+    <jar href="lib\jfoenix-8.0.10.jar" size="2710207" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="CateringFX" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="cateringfx.CateringFX"  name="CateringFX" />
+  <update check="always"/>
+</jnlp>
