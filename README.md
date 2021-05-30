@@ -1,4 +1,4 @@
-# Chatbot Prototype
+# Food Catering
 
 ![Project Image](assets/image.png)
 
